@@ -7,7 +7,7 @@
 ## Installation
 
 ```
-react-native init --template KoalityStarter <new project name>
+react-native init --template koality-react-native-template <new project name>
 cd <new project name>
 node scripts/setupDevDependencies.js
 ```
