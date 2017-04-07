@@ -1,0 +1,23 @@
+{
+  "name": "KoalityRNTemplate",
+  "version": "0.1.0",
+  "description": "A high koality react native template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeKoalas/KoalityReactNativeTemplate.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "template",
+    "starter",
+    "boilerplate",
+    "kit"
+  ],
+  "author": "Donnie West",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeKoalas/KoalityReactNativeTemplate/issues"
+  },
+  "homepage": "https://github.com/CodeKoalas/KoalityReactNativeTemplate#readme"
+}
