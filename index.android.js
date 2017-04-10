@@ -1,6 +1,6 @@
 /**
  * Code Koalas boilerplate
- * TODO: Put Git URL here
+ * https://github.com/CodeKoalas/koality-react-native-template.git
  * @flow
  */
 
