@@ -5,6 +5,6 @@
  */
 
 import { AppRegistry } from 'react-native';
-import App from './src/containers/App.js';
+import App from './src/containers/App';
 
 AppRegistry.registerComponent('KoalityRNTemplate', () => App);
