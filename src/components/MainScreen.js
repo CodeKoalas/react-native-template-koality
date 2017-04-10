@@ -2,7 +2,7 @@ import React from 'react';
 import Drawer from 'react-native-drawer-layout-polyfill';
 import { Route } from 'react-router-native';
 
-import DrawerContents from './DrawerContents';
+import DrawerContents from '../containers/DrawerContents';
 import Welcome from './Welcome';
 
 function renderNavigationView() {
