@@ -7,4 +7,4 @@
 import { AppRegistry } from 'react-native';
 import App from './src/containers/App';
 
-AppRegistry.registerComponent('KoalityRNTemplate', () => App);
+AppRegistry.registerComponent('HelloWorld', () => App);
