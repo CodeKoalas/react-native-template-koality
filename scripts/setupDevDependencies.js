@@ -27,7 +27,7 @@ function createScripts() {
   }
   packageJSON.scripts.lint = "eslint '{src,__test__}/**/*.js'";
   packageJSON.scripts.format = "prettier-eslint --write '{src,__test__}/**/*.js'";
-  fs.writeFileSync(packageJSONPath, packageJSON, 'utf8');
+  fs.writeFileSync(packageJSONPath, JSON.stringify(packageJSON), 'utf8');
 }
 
 function installDevDependencies() {
