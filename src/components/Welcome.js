@@ -30,7 +30,8 @@ export default class Welcome extends Component {
     api.getPhotos().then(photos =>
       this.setState({
         photos,
-      }));
+      }),
+    );
   }
 
   renderItem = ({ item }) => <PhotoItem source={{ uri: item.photo }} />;

@@ -28,8 +28,8 @@ export default class Settings extends Component {
     }
   };
 
-  onChangeFirstName = (firstName) => {
-    this.setState((state) => {
+  onChangeFirstName = firstName => {
+    this.setState(state => {
       const user = Object.assign({}, state.user, { firstName });
       return {
         user,
@@ -37,8 +37,8 @@ export default class Settings extends Component {
     });
   };
 
-  onChangeLastName = (lastName) => {
-    this.setState((state) => {
+  onChangeLastName = lastName => {
+    this.setState(state => {
       const user = Object.assign({}, state.user, { lastName });
       return {
         user,

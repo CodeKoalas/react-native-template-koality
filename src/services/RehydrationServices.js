@@ -5,12 +5,12 @@ import actions from '../actions';
 
 import ReduxPersist from '../config/ReduxPersist';
 
-const updateReducers = (store) => {
+const updateReducers = store => {
   const reducerVersion = ReduxPersist.reducerVersion;
   const config = ReduxPersist.storeConfig;
   // Check to ensure latest reducer version
   AsyncStorage.getItem('reducerVersion')
-    .then((localVersion) => {
+    .then(localVersion => {
       if (localVersion !== reducerVersion) {
         // Purge store
         persistStore(store, config, () => {

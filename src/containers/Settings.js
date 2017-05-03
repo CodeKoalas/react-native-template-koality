@@ -11,9 +11,11 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  updateUser: (user) => {
+  updateUser: user => {
     dispatch(update(user));
   },
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SettingsComponent));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(SettingsComponent),
+);

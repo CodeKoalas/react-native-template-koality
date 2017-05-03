@@ -4,7 +4,7 @@ import { Route, Redirect } from 'react-router-native';
 export default ({ component, auth, ...rest }) => (
   <Route
     {...rest}
-    render={(props) => {
+    render={props => {
       if (auth) {
         return React.createElement(component, props);
       }

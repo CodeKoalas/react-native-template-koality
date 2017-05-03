@@ -12,4 +12,6 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(DrawerContentsComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(
+  DrawerContentsComponent,
+);
