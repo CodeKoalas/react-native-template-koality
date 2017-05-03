@@ -1,4 +1,6 @@
 {
-  "babel-eslint": "^7.2.1",
-  "eslint": "3.19.0"
+  "babel-eslint": "^7.2.3",
+  "eslint": "3.19.0",
+  "eslint-config-koality": "1.0.0",
+  "prettier-eslint": "^6.2.0"
 }

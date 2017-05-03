@@ -19,12 +19,15 @@ function getYarnVersionIfAvailable() {
   return yarnVersion;
 }
 
-function installEslintAirBnb() {
-  if (getYarnVersionIfAvailable()) {
-    execSync(`npm info "eslint-config-airbnb@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs yarn add --dev "eslint-config-airbnb@latest"`);
-  } else {
-    execSync(`npm info "eslint-config-airbnb@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "eslint-config-airbnb@latest"`);
+function createScripts() {
+  const packageJSONPath = path.resolve('package.json');
+  const packageJSON = JSON.parse(fs.readFileSync(packageJSONPath));
+  if (!packageJSON.scripts) {
+    packageJSON.scripts = {};
   }
+  packageJSON.scripts.lint = "eslint '{src,__test__}/**/*.js'";
+  packageJSON.scripts.format = "prettier-eslint --write '{src,__test__}/**/*.js'";
+  fs.writeFileSync(packageJSONPath, packageJSON, 'utf8');
 }
 
 function installDevDependencies() {
@@ -47,4 +50,4 @@ function installDevDependencies() {
 }
 
 installDevDependencies();
-installEslintAirBnb();
+createScripts();
