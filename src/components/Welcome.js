@@ -13,12 +13,12 @@ const Container = styled.View`
 const Instructions = styled.Text`
   text-align: center;
   color: #333333;
-  margin-bottom: 5;
+  margin-bottom: 5px;
 `;
 
 const PhotoItem = styled.Image`
-  height: 480;
-  width: 640;
+  height: 480px;
+  width: 640px;
 `;
 
 export default class Welcome extends Component {

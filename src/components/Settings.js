@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components/native';
 
 const Container = styled.View`
-  margin: 10;
+  margin: 10px;
 `;
 
 const Header = styled.Text``;

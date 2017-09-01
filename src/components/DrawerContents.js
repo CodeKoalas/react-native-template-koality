@@ -12,20 +12,20 @@ const Content = styled.View`
 `;
 
 const AvatarContainer = styled.View`
-  margin: 10;
+  margin: 10px;
 `;
 
 const ButtonContainer = styled.View`
-  margin: 5;
+  margin: 5px;
 `;
 
 const Info = styled.Text``;
 
 const Avatar = styled.Image`
-  height: 150;
+  height: 150px;
   width: 100%;
-  border-radius: 50;
-  margin: 10;
+  border-radius: 50px;
+  margin: 10px;
 `;
 
 const LogoutButton = styled.Button`
