@@ -5,7 +5,7 @@
   "react-redux": "^5.0.6",
   "react-router": "^4.2.0",
   "react-router-native": "^4.2.0",
-  "react-router-native-button": "1.0.1",
+  "react-router-native-button": "1.1.0",
   "react-router-redux": "5.0.0-alpha.6",
   "redux": "^3.7.2",
   "redux-persist": "^4.9.1",
