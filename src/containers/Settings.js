@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-native';
 import SettingsComponent from '../components/Settings';
+import { actionCreators } from '../ducks/user';
 
-import userActions from '../actions';
-
-const update = userActions.user.update;
+const { update } = actionCreators;
 
 const mapStateToProps = state => ({
   user: state.user,

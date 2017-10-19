@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
-import actions from '../actions';
+import { actionCreators } from '../ducks/user';
 import DrawerContentsComponent from '../components/DrawerContents';
+
+const { logout } = actionCreators;
 
 const mapStateToProps = state => ({
   user: state.user,
@@ -8,7 +10,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   logout: () => {
-    dispatch(actions.user.logout());
+    dispatch(logout());
   },
 });
 

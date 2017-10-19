@@ -1,7 +1,7 @@
 import { createStore, compose, combineReducers, applyMiddleware } from 'redux';
 import { autoRehydrate } from 'redux-persist';
 import { routerMiddleware, routerReducer } from 'react-router-redux';
-import reducers from '../reducers';
+import reducers from '../ducks';
 import history from './history';
 import ReduxPersist from '../config/ReduxPersist';
 import RehydrationServices from '../services/RehydrationServices';
