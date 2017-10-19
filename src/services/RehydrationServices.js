@@ -1,9 +1,11 @@
 import { AsyncStorage } from 'react-native';
 import { persistStore } from 'redux-persist';
 
-import actions from '../actions';
+import { actionCreators } from '../ducks/hydration';
 
 import ReduxPersist from '../config/ReduxPersist';
+
+const { endHydration } = actionCreators;
 
 const updateReducers = store => {
   const reducerVersion = ReduxPersist.reducerVersion;
@@ -14,18 +16,18 @@ const updateReducers = store => {
       if (localVersion !== reducerVersion) {
         // Purge store
         persistStore(store, config, () => {
-          store.dispatch(actions.hydration.endHydration());
+          store.dispatch(endHydration());
         }).purge();
         AsyncStorage.setItem('reducerVersion', reducerVersion);
       } else {
         persistStore(store, config, () => {
-          store.dispatch(actions.hydration.endHydration());
+          store.dispatch(endHydration());
         });
       }
     })
     .catch(() => {
       persistStore(store, config, () => {
-        store.dispatch(actions.hydration.endHydration());
+        store.dispatch(endHydration());
       });
       AsyncStorage.setItem('reducerVersion', reducerVersion);
     });
